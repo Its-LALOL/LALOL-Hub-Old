@@ -4,3 +4,4 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/Roblox-Scri
 ```
 - AutoClicker
 - AutoUpgrader
+- Free Badge
