@@ -2,4 +2,7 @@
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/Roblox-Scripts/main/Skala%20Simulator/.lua'))()
 ```
-- AutoFarm
+- ## Autofarm
+- AutoClicker
+- AutoTurtle
+- AutoClick Updator
