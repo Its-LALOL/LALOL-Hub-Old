@@ -4,5 +4,4 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/Roblox-Scri
 ```
 - ## Autofarm
 - AutoClicker
-- AutoTurtle Buyer
-- AutoClick Updator
+- AutoUpgrader
