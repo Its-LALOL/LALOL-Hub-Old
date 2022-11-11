@@ -1,5 +1,3 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Universal/.lua'))()
-
 autoclicker=false
 autoupgrade=false
 
