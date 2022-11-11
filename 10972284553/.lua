@@ -19,7 +19,7 @@ local function upgrade()
 	end
 end
 
-local skala=_G.window:NewTab('Skala Simulator')
+local skala=window:NewTab('Skala Simulator')
 local autofarm=tab:NewSection('AutoFarm')
 local others=tab:NewSection('Others')
 
