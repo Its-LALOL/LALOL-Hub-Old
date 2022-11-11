@@ -15,8 +15,8 @@ spawn(walkspeed)
 spawn(jumppower)
 
 local libary=loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/Kavo-UI-Library/main/.lua'))()
-local _G.window=libary.CreateLib('\76\65\76\79\76\32\72\117\98\32\124\32\103\105\116\104\117\98\46\99\111\109\47\73\116\115\45\76\65\76\79\76', 'Ocean')
-local universal=_G.window:NewTab('Universal')
+local window=libary.CreateLib('\76\65\76\79\76\32\72\117\98\32\124\32\103\105\116\104\117\98\46\99\111\109\47\73\116\115\45\76\65\76\79\76', 'Ocean')
+local universal=window:NewTab('Universal')
 
 local player=universal:NewSection('Player')
 player:NewSlider('Walk Speed', '', 100, 16, function(i)
