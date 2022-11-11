@@ -20,8 +20,8 @@ local function upgrade()
 end
 
 local skala=window:NewTab('Skala Simulator')
-local autofarm=tab:NewSection('AutoFarm')
-local others=tab:NewSection('Others')
+local autofarm=skala:NewSection('AutoFarm')
+local others=skala:NewSection('Others')
 
 skala:NewToggle('AutoClicker', 'google.com', function(state)
 	if state then
