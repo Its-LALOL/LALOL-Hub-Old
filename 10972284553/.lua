@@ -23,14 +23,14 @@ local skala=window:NewTab('Skala Simulator')
 local autofarm=skala:NewSection('AutoFarm')
 local others=skala:NewSection('Others')
 
-skala:NewToggle('AutoClicker', 'google.com', function(state)
+autofarm:NewToggle('AutoClicker', 'google.com', function(state)
 	if state then
 		autoclicker=true
 	else
 		autoclicker=false
 	end
 end)
-skala:NewToggle('AutoUpgrader', 'hello!!!', function(state)
+autofarm:NewToggle('AutoUpgrader', 'hello!!!', function(state)
 	if state then
 		autoupgrade=true
 	else
