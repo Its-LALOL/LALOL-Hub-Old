@@ -7,6 +7,8 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 ## Universal
 - Walk speed
 - Jump boost
+- Gravity
+- Sit
 ## [Skala Simulator](https://www.roblox.com/games/10972284553/Skala-Simulator)
 - AutoClicker
 - AutoUpgrader
