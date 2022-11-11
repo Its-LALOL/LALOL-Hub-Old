@@ -41,10 +41,10 @@ others:NewButton('Free Badge', 'bye111111', function()
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack({[1]='42', [2]='All'}))
 end)
 
-while wait(0.1) do
+while wait(0.5) do
 	for i=1,10 do
 		click()
-		wait(0.1)
+		wait(0.5)
 	end
 	upgrade()
 end
