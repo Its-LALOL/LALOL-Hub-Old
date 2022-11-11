@@ -2,12 +2,12 @@ _G.walkspeed_value=game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
 _G.jumppower_value=game.Players.LocalPlayer.Character.Humanoid.JumpPower
 
 local function walkspeed()
-	while wait(0.1) do
+	while wait(0.5) do
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=_G.walkspeed_value
 	end
 end
 local function jumppower()
-	while wait(0.1) do
+	while wait(0.5) do
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower=_G.jumppower_value
 	end
 end
