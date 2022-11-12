@@ -9,6 +9,12 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Jump boost
 - Gravity
 - Sit
+## [SPTS: Origin](https://www.roblox.com/games/10710676163/SPTS-Origin)
+- Fist Strength
+- Body Tougness
+- Movement Speed
+- Jump Force
+- Psychic Power
 ## [Skala Simulator](https://www.roblox.com/games/10972284553/Skala-Simulator)
 - AutoClicker
 - AutoUpgrader
