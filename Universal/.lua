@@ -3,17 +3,17 @@ _G.jumppower_value=game.Players.LocalPlayer.Character.Humanoid.JumpPower
 _G.gravity_value=game.Workspace.Gravity
 
 local function walkspeed()
-	while wait(0.5) do
+	while wait(1) do
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=_G.walkspeed_value
 	end
 end
 local function jumppower()
-	while wait(0.5) do
+	while wait(1) do
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower=_G.jumppower_value
 	end
 end
 local function gravity()
-	while wait(0.5) do
+	while wait(1) do
 		game.Workspace.Gravity=_G.gravity_value
 	end
 end
@@ -32,7 +32,7 @@ end)
 player:NewSlider('Jump Power', '', 300, 50, function(i)
 	_G.jumppower_value=i
 end)
-player:NewSlider('Gravity', '', 100, 0, function(i)
+player:NewSlider('Gravity', '', 196, 0, function(i)
 	_G.gravity_value=i
 end)
 player:NewButton('Sit', '', function()
