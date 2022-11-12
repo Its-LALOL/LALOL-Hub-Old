@@ -1,3 +1,4 @@
+game.StarterGui:SetCore('SendNotification', {Title='LALOL Hub', Text='Thx for using!', Icon='http://www.roblox.com/asset/?id=8941506186', Duration=5})
 local a=''
 for i,v in {10972284553, 10710676163} do
 	if game.PlaceId==v then
