@@ -1,3 +1,4 @@
+level=1
 fist_strength=false
 body_tougness=false
 movement_speed=false
@@ -8,13 +9,16 @@ local function remote(what)
 	args={
 	    [1] = {
 	        [1] = what,
-	        [2] = 1
+	        [2] = level
 	    }
 	}
 	game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 end
 local spts=window:NewTab('SPTS')
 local autofarm=spts:NewSection('AutoFarm')
+autofarm:NewSlider('Level (BETA)', '', 5, 1, function(i)
+	level=i
+end)
 autofarm:NewToggle('Fist Strength', '', function(state)
 	if state then
 		fist_strength=true
