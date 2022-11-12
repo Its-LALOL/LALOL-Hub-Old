@@ -1,5 +1,5 @@
 local a=''
-for i,v in {10972284553} do
+for i,v in {10972284553, 10710676163} do
 	if game.PlaceId==v then
 		a=game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/'..tostring(game.PlaceId)..'/.lua')
 	end
