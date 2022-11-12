@@ -15,6 +15,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Movement Speed
 - Jump Force
 - Psychic Power
+- Safe Zone++
 ## [Skala Simulator](https://www.roblox.com/games/10972284553/Skala-Simulator)
 - AutoClicker
 - AutoUpgrader
