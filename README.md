@@ -9,6 +9,12 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Jump boost
 - Gravity
 - Sit
+## [Free ADMIN](https://www.roblox.com/games/4522347649/FREE-ADMIN)
+- Explode all
+- Spam
+- Spam 2.0
+- Jail all
+- Scary sounds
 ## [SPTS: Origin](https://www.roblox.com/games/10710676163/SPTS-Origin)
 - Level (BETA)
 - Fist Strength
