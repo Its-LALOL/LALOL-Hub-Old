@@ -1,9 +1,9 @@
 # LALOL-Hub
 Script hub for Roblox
-
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/.lua'))()
 ```
+[Get key](https://discord.gg/XXqzxT7E5z)
 ## Universal
 - Walk speed
 - Jump boost
