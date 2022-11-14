@@ -22,7 +22,7 @@ spawn(jumppower)
 spawn(gravity)
 
 local libary=loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/Kavo-UI-Library/main/.lua'))()
-local window=libary.CreateLib('\76\65\76\79\76\32\72\117\98\32\124\32\103\105\116\104\117\98\46\99\111\109\47\73\116\115\45\76\65\76\79\76', 'Ocean')
+local window=libary.CreateLib('\76\65\76\79\76\32\72\117\98\32\124\32\100\105\115\99\111\114\100\46\103\103\47\88\88\113\122\120\84\55\69\53\122', 'Ocean')
 local universal=window:NewTab('Universal')
 
 local player=universal:NewSection('Player')
