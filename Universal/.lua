@@ -29,24 +29,16 @@ _G.walkspeed_value=game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
 _G.jumppower_value=game.Players.LocalPlayer.Character.Humanoid.JumpPower
 _G.gravity_value=game.Workspace.Gravity
 
-local function walkspeed()
-	while wait(1) do
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=_G.walkspeed_value
+game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(i)
+	key=i:byte()
+	for i,v in {119, 97, 115, 100, 32} do --WASD+Spacebar
+		if v==key then
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=_G.walkspeed_value
+			game.Players.LocalPlayer.Character.Humanoid.JumpPower=_G.jumppower_value
+			game.Workspace.Gravity=_G.gravity_value
+		end
 	end
-end
-local function jumppower()
-	while wait(1) do
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower=_G.jumppower_value
-	end
-end
-local function gravity()
-	while wait(1) do
-		game.Workspace.Gravity=_G.gravity_value
-	end
-end
-spawn(walkspeed)
-spawn(jumppower)
-spawn(gravity)
+end)
 
 local universal=window:CreateTab('Universal')
 local player=universal:CreateSection('Player')
