@@ -15,7 +15,7 @@ local function remote(what)
 	game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 end
 local spts=window:CreateTab('SPTS')
-local autofarm=spts:CreateSection('AutoFarm')
+spts:CreateSection('AutoFarm')
 spts:CreateSlider({
 	Name='Level (BETA)',
 	Range={1, 5},
@@ -87,7 +87,7 @@ spts:CreateToggle({
 		end
 	end,
 })
-local others=spts:CreateSection('Others')
+spts:CreateSection('Others')
 spts:CreateButton({
 	Name='Safe Zone++',
 	Callback=function()
