@@ -19,27 +19,39 @@ local function upgrade()
 	end
 end
 
-local skala=window:NewTab('Skala Simulator')
-local autofarm=skala:NewSection('AutoFarm')
-local others=skala:NewSection('Others')
-
-autofarm:NewToggle('AutoClicker', 'google.com', function(state)
-	if state then
-		autoclicker=true
-	else
-		autoclicker=false
-	end
-end)
-autofarm:NewToggle('AutoUpgrader', 'hello!!!', function(state)
-	if state then
-		autoupgrade=true
-	else
-		autoupgrade=false
-	end
-end)
-others:NewButton('Free Badge', 'bye111111', function()
-	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack({[1]='42', [2]='All'}))
-end)
+local skala=window:CreateTab('Skala Simulator')
+skala:CreateSection('AutoFarm')
+skala:CreateToggle({
+	Name='AutoClicker',
+	CurrentValue=false,
+	Flag='AutoClicker',
+	Callback=function(state)
+		if state then
+			autoclicker=true
+		else
+			autoclicker=false
+		end
+	end,
+})
+skala:CreateToggle({
+	Name='AutoUpgrade',
+	CurrentValue=false,
+	Flag='AutoUpgrade',
+	Callback=function(state)
+		if state then
+			autoupgrade=true
+		else
+			autoupgrade=false
+		end
+	end,
+})
+skala:CreateSection('Others')
+skala:CreateButton({
+	Name='Free Badge',
+	Callback=function()
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack({[1]='42', [2]='All'}))
+	end,
+})
 
 while wait(0.5) do
 	for i=1,10 do
