@@ -25,5 +25,5 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Safe Zone++
 ## [Skala Simulator](https://www.roblox.com/games/10972284553/Skala-Simulator)
 - AutoClicker
-- AutoUpgrader
+- AutoUpgrade
 - Free Badge
