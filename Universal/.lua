@@ -63,7 +63,7 @@ universal:CreateSlider({
 	end,
 })
 universal:CreateSlider({
-	Name='Jump power',
+	Name='Jump Power',
 	Range={0, 300},
 	Increment=1,
 	Suffix='Power',
