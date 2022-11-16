@@ -24,7 +24,7 @@ skala:CreateSection('AutoFarm')
 skala:CreateToggle({
 	Name='AutoClicker',
 	CurrentValue=false,
-	Flag='AutoClicker',
+	Flag='skala_autoclicker',
 	Callback=function(state)
 		autoclicker=state
 	end,
@@ -32,7 +32,7 @@ skala:CreateToggle({
 skala:CreateToggle({
 	Name='AutoUpgrade',
 	CurrentValue=false,
-	Flag='AutoUpgrade',
+	Flag='skala_autoupgrade',
 	Callback=function(state)
 		autoupgrade=state
 	end,
