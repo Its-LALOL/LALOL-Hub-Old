@@ -6,10 +6,14 @@ jump_force=false
 psychic_power=false
 
 local function remote(what)
+	local levell=level
+	if what=='Add_FS_Request' then
+		local levell=1
+	end
 	args={
 	    [1] = {
 	        [1] = what,
-	        [2] = level
+	        [2] = levell
 	    }
 	}
 	game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
