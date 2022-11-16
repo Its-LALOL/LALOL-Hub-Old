@@ -8,7 +8,9 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Walk speed
 - Jump boost
 - Gravity
+- Infinite Jump
 - Sit
+- Rejoin
 ## [Free ADMIN](https://www.roblox.com/games/4522347649/FREE-ADMIN)
 - Explode all
 - Spam
