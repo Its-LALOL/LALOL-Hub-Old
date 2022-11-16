@@ -98,7 +98,19 @@ universal:CreateButton({
 		game.Players.LocalPlayer.Character.Humanoid.Sit=true
 	end,
 })
-
+universal:CreateInput({
+	Name='Teleport',
+	PlaceholderText='Player',
+	RemoveTextAfterFocusLost=false,
+	Callback=function(i)
+		for _,v in pairs(game.Players:GetPlayers()) do
+			if v.Name:lower():sub(1, #i)==i:lower() then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=v.Character.HumanoidRootPart.CFrame
+				break
+			end
+		end
+	end,
+})
 universal:CreateSection('Server')
 universal:CreateButton({
 	Name='Rejoin',
