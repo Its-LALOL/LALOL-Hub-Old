@@ -6,7 +6,7 @@ fa=window:CreateTab('Free Admin')
 fa:CreateButton({
 	Name='Explode all',
 	Callback=function()
-		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+		for i,v in pairs(game.Players:GetPlayers()) do
 			command(':explode '..v.name)
 		end
 	end,
@@ -14,7 +14,7 @@ fa:CreateButton({
 fa:CreateButton({
 	Name='Spam',
 	Callback=function()
-		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+		for i,v in pairs(game.Players:GetPlayers()) do
 			local num=math.random(1, 3)
 			if num==1 then
 				emoji='💥'
@@ -47,7 +47,7 @@ fa:CreateButton({
 fa:CreateButton({
 	Name='Jail all',
 	Callback=function()
-		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+		for i,v in pairs(game.Players:GetPlayers()) do
 			command(':jail '..v.name)
 		end
 	end,
