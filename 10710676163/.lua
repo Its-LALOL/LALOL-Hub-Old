@@ -32,11 +32,7 @@ spts:CreateToggle({
 	CurrentValue=false,
 	Flag='Fist_Strength',
 	Callback=function(state)
-		if state then
-			fist_strength=true
-		else
-			fist_strength=false
-		end
+		fist_strength=state
 	end,
 })
 spts:CreateToggle({
@@ -44,11 +40,7 @@ spts:CreateToggle({
 	CurrentValue=false,
 	Flag='Body_Tougness',
 	Callback=function(state)
-		if state then
-			body_tougness=true
-		else
-			body_tougness=false
-		end
+		body_tougness=state
 	end,
 })
 spts:CreateToggle({
@@ -56,11 +48,7 @@ spts:CreateToggle({
 	CurrentValue=false,
 	Flag='Movement_Speed',
 	Callback=function(state)
-		if state then
-			movement_speed=true
-		else
-			movement_speed=false
-		end
+		movement_speed=state
 	end,
 })
 spts:CreateToggle({
@@ -68,23 +56,15 @@ spts:CreateToggle({
 	CurrentValue=false,
 	Flag='Jump_Force',
 	Callback=function(state)
-		if state then
-			jump_force=true
-		else
-			jump_force=false
-		end
-	end,
+		jump_force=state
+	end
 })
 spts:CreateToggle({
 	Name='Psychic Power',
 	CurrentValue=false,
 	Flag='Psychic_Power',
 	Callback=function(state)
-		if state then
-			psychic_power=true
-		else
-			psychic_power=false
-		end
+		psychic_power=state
 	end,
 })
 spts:CreateSection('Others')
