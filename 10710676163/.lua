@@ -7,7 +7,7 @@ psychic_power=false
 
 local function remote(what)
 	levell=level
-	if what=='Add_FS_Request' then
+	if what=='Add_FS_Request' or what=='Add_JF_Request' then
 		levell=1
 	end
 	args={
