@@ -4,9 +4,9 @@ local window=Rayfield:CreateWindow({
 	LoadingTitle='LALOL Hub',
 	LoadingSubtitle='Thanks for using!',
 	ConfigurationSaving={
-		Enabled=false,
-		FolderName=nil,
-		FileName='LALOL Hub'
+		Enabled=true,
+		FolderName='LALOL Hub',
+		FileName='cfg'
 	},
         Discord={
         	Enabled=true,
