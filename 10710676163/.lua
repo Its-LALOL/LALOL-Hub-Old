@@ -22,7 +22,7 @@ spts:CreateSlider({
 	Increment=1,
 	Suffix='',
 	CurrentValue=1,
-	Flag='Level',
+	Flag='spts_level',
 	Callback=function(i)
 		level=i
 	end,
@@ -30,7 +30,7 @@ spts:CreateSlider({
 spts:CreateToggle({
 	Name='Fist Strength',
 	CurrentValue=false,
-	Flag='Fist_Strength',
+	Flag='spts_fist_Strength',
 	Callback=function(state)
 		fist_strength=state
 	end,
@@ -38,7 +38,7 @@ spts:CreateToggle({
 spts:CreateToggle({
 	Name='Body Tougness',
 	CurrentValue=false,
-	Flag='Body_Tougness',
+	Flag='spts_body_tougness',
 	Callback=function(state)
 		body_tougness=state
 	end,
@@ -46,7 +46,7 @@ spts:CreateToggle({
 spts:CreateToggle({
 	Name='Movement Speed',
 	CurrentValue=false,
-	Flag='Movement_Speed',
+	Flag='spts_movement_speed',
 	Callback=function(state)
 		movement_speed=state
 	end,
@@ -54,7 +54,7 @@ spts:CreateToggle({
 spts:CreateToggle({
 	Name='Jump Force',
 	CurrentValue=false,
-	Flag='Jump_Force',
+	Flag='spts_jump_force',
 	Callback=function(state)
 		jump_force=state
 	end
@@ -62,7 +62,7 @@ spts:CreateToggle({
 spts:CreateToggle({
 	Name='Psychic Power',
 	CurrentValue=false,
-	Flag='Psychic_Power',
+	Flag='spts_psychic_power',
 	Callback=function(state)
 		psychic_power=state
 	end,
