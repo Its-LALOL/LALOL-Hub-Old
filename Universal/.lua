@@ -25,32 +25,41 @@ local window=Rayfield:CreateWindow({
 	}
 })
 
-_G.walkspeed_value=game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
-_G.jumppower_value=game.Players.LocalPlayer.Character.Humanoid.JumpPower
-_G.gravity_value=game.Workspace.Gravity
+walkspeed_value=game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
+jumppower_value=game.Players.LocalPlayer.Character.Humanoid.JumpPower
+gravity_value=game.Workspace.Gravity
+infinite_jump=false
 
 game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(i)
 	key=i:byte()
-	for i,v in {119, 97, 115, 100, 32} do --WASD+Spacebar
+	for i,v in {119, 97, 115, 100} do --WASD
 		if v==key then
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=_G.walkspeed_value
-			game.Players.LocalPlayer.Character.Humanoid.JumpPower=_G.jumppower_value
-			game.Workspace.Gravity=_G.gravity_value
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=walkspeed_value
+			return
+		end
+	end
+	if key==32 then --Spacebar
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower=jumppower_value
+		game.Workspace.Gravity=gravity_value
+		if infinite_jump then
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+			wait(0.1)
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState('Seated')
 		end
 	end
 end)
 
 local universal=window:CreateTab('Universal')
-local player=universal:CreateSection('Player')
+universal:CreateSection('Player')
 universal:CreateSlider({
 	Name='Walk Speed',
 	Range={0, 100},
 	Increment=1,
 	Suffix='Speed',
 	CurrentValue=16,
-	Flag='WalkSpeed',
+	Flag='universal_walk_speed',
 	Callback=function(i)
-		_G.walkspeed_value=i
+		walkspeed_value=i
 	end,
 })
 universal:CreateSlider({
@@ -59,9 +68,9 @@ universal:CreateSlider({
 	Increment=1,
 	Suffix='Power',
 	CurrentValue=50,
-	Flag='JumpPower',
+	Flag='universal_jump_power',
 	Callback=function(i)
-		_G.jumppower_value=i
+		jumppower_value=i
 	end,
 })
 universal:CreateSlider({
@@ -70,14 +79,34 @@ universal:CreateSlider({
 	Increment=1,
 	Suffix='',
 	CurrentValue=196,
-	Flag='Gravity',
+	Flag='universal_gravity',
 	Callback=function(i)
-		_G.gravity_value=i
+		gravity_value=i
+	end,
+})
+universal:CreateToggle({
+	Name='Infinite Jump',
+	CurrentValue=false,
+	Flag='universal_infinite_jump',
+	Callback=function(state)
+		if state then
+			infinite_jump=true
+		else
+			infinite_jump=false
+		end
 	end,
 })
 universal:CreateButton({
 	Name='Sit',
 	Callback=function()
 		game.Players.LocalPlayer.Character.Humanoid.Sit=true
+	end,
+})
+
+universal:CreateSection('Server')
+universal:CreateButton({
+	Name='Rejoin',
+	Callback=function()
+		game:GetService('TeleportService'):Teleport(game.PlaceId, game.Players.LocalPlayer)
 	end,
 })
