@@ -26,11 +26,7 @@ skala:CreateToggle({
 	CurrentValue=false,
 	Flag='AutoClicker',
 	Callback=function(state)
-		if state then
-			autoclicker=true
-		else
-			autoclicker=false
-		end
+		autoclicker=state
 	end,
 })
 skala:CreateToggle({
@@ -38,11 +34,7 @@ skala:CreateToggle({
 	CurrentValue=false,
 	Flag='AutoUpgrade',
 	Callback=function(state)
-		if state then
-			autoupgrade=true
-		else
-			autoupgrade=false
-		end
+		autoupgrade=state
 	end,
 })
 skala:CreateSection('Others')
