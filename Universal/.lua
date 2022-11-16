@@ -89,11 +89,7 @@ universal:CreateToggle({
 	CurrentValue=false,
 	Flag='universal_infinite_jump',
 	Callback=function(state)
-		if state then
-			infinite_jump=true
-		else
-			infinite_jump=false
-		end
+		infinite_jump=state
 	end,
 })
 universal:CreateButton({
