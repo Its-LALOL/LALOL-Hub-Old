@@ -9,6 +9,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Jump Power
 - Gravity
 - Infinite Jump
+- Teleport
 - Sit
 - Rejoin
 ## [Free ADMIN](https://www.roblox.com/games/4522347649/FREE-ADMIN)
