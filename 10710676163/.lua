@@ -6,9 +6,9 @@ jump_force=false
 psychic_power=false
 
 local function remote(what)
-	local levell=level
+	levell=level
 	if what=='Add_FS_Request' then
-		local levell=1
+		levell=1
 	end
 	args={
 	    [1] = {
