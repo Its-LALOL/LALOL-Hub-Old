@@ -92,12 +92,6 @@ universal:CreateToggle({
 		infinite_jump=state
 	end,
 })
-universal:CreateButton({
-	Name='Sit',
-	Callback=function()
-		game.Players.LocalPlayer.Character.Humanoid.Sit=true
-	end,
-})
 universal:CreateInput({
 	Name='Teleport',
 	PlaceholderText='Player',
@@ -109,6 +103,12 @@ universal:CreateInput({
 				break
 			end
 		end
+	end,
+})
+universal:CreateButton({
+	Name='Sit',
+	Callback=function()
+		game.Players.LocalPlayer.Character.Humanoid.Sit=true
 	end,
 })
 universal:CreateSection('Server')
