@@ -121,7 +121,7 @@ universal:CreateToggle({
 		esp=state
 		while esp and wait(1) do
 			for i,v in pairs(game.Players:GetPlayers()) do
-				if not v.Character:FindFirstChild('Head') then
+				if not v.Character then
 					continue
 				end
 				if not v.Character:FindFirstChild('HumanoidRootPart') then
@@ -134,12 +134,16 @@ universal:CreateToggle({
 				ESP_Clone.Adornee=v.Character
 				ESP_Clone.Parent=v.Character.HumanoidRootPart
 				ESP_Clone.OutlineColor=Color3.new(255, 255, 255)
-				if v:FindFirstChild('Team') then
+				if v.Team then
 					ESP_Clone.OutlineColor=v.Team.TeamColor.Color
+					print(1)
 				end
 			end
 		end
 		for i,v in pairs(game.Players:GetChildren()) do
+			if not v.Character then
+				continue
+			end
 			if not v.Character:FindFirstChild('HumanoidRootPart') then
 				continue
 			end
