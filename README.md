@@ -10,9 +10,10 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Gravity
 - Infinite Jump
 - Teleport
-- Sit
 - ESP
 - Rejoin
+- AutoEZ
+- Sit
 ## [Free ADMIN](https://www.roblox.com/games/4522347649/FREE-ADMIN)
 - Explode all
 - Spam
