@@ -9,6 +9,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Jump Power
 - Gravity
 - Infinite Jump
+- Loop Teleport
 - Teleport
 - ESP
 - Rejoin
