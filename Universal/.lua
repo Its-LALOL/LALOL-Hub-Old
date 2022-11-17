@@ -29,6 +29,12 @@ walkspeed_value=game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
 jumppower_value=game.Players.LocalPlayer.Character.Humanoid.JumpPower
 gravity_value=game.Workspace.Gravity
 infinite_jump=false
+esp=false
+
+local ESP=Instance.new('Highlight')
+ESP.Name='LALOL Hub ESP'
+ESP.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop
+ESP.FillTransparency=999
 
 game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(i)
 	key=i:byte()
@@ -109,6 +115,43 @@ universal:CreateButton({
 	Name='Sit',
 	Callback=function()
 		game.Players.LocalPlayer.Character.Humanoid.Sit=true
+	end,
+})
+universal:CreateSection('Visual')
+universal:CreateToggle({
+	Name='ESP',
+	CurrentValue=false,
+	Flag='universal_esp',
+	Callback=function(state)
+		esp=state
+		while esp and wait(1) do
+			for i,v in pairs(game.Players:GetPlayers()) do
+				if not v.Character:FindFirstChild('Head') then
+					continue
+				end
+				if not v.Character:FindFirstChild('HumanoidRootPart') then
+					continue
+				end
+				if v.Character.HumanoidRootPart:FindFirstChild('LALOL Hub ESP') then
+					continue
+				end
+				local ESP_Clone=ESP:Clone()
+				ESP_Clone.Adornee=v.Character
+				ESP_Clone.Parent=v.Character.HumanoidRootPart
+				ESP_Clone.OutlineColor=Color3.new(255, 255, 255)
+				if v:FindFirstChild('Team') then
+					ESP_Clone.OutlineColor=v.Team.TeamColor.Color
+				end
+			end
+		end
+		for i,v in pairs(game.Players:GetChildren()) do
+			if not v.Character:FindFirstChild('HumanoidRootPart') then
+				continue
+			end
+			if v.Character.HumanoidRootPart:FindFirstChild('LALOL Hub ESP') then
+				v.Character.HumanoidRootPart:FindFirstChild('LALOL Hub ESP'):remove()
+			end
+		end
 	end,
 })
 universal:CreateSection('Server')
