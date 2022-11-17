@@ -32,7 +32,6 @@ infinite_jump=false
 esp=false
 autoez=false
 loop_teleport=false
-loop_teleport_player=''
 
 local ESP=Instance.new('Highlight')
 ESP.Name='LALOL Hub ESP'
@@ -117,13 +116,9 @@ universal:CreateInput({
 	Callback=function(i)
 		for _,v in pairs(game.Players:GetPlayers()) do
 			if v.Name:lower():sub(1, #i)==i:lower() or v.DisplayName:lower():sub(1, #i)==i:lower() then
-				loop_teleport_player=v.Name
 				while true do
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=v.Character.HumanoidRootPart.CFrame
 					if not loop_teleport then
-						break
-					end
-					if not loop_teleport_player==v.Name then
 						break
 					end
 					wait(0.1)
