@@ -30,6 +30,7 @@ jumppower_value=game.Players.LocalPlayer.Character.Humanoid.JumpPower
 gravity_value=game.Workspace.Gravity
 infinite_jump=false
 esp=false
+autoez=false
 
 local ESP=Instance.new('Highlight')
 ESP.Name='LALOL Hub ESP'
@@ -111,12 +112,6 @@ universal:CreateInput({
 		end
 	end,
 })
-universal:CreateButton({
-	Name='Sit',
-	Callback=function()
-		game.Players.LocalPlayer.Character.Humanoid.Sit=true
-	end,
-})
 universal:CreateSection('Visual')
 universal:CreateToggle({
 	Name='ESP',
@@ -159,5 +154,37 @@ universal:CreateButton({
 	Name='Rejoin',
 	Callback=function()
 		game:GetService('TeleportService'):Teleport(game.PlaceId, game.Players.LocalPlayer)
+	end,
+})
+universal:CreateSection('Others')
+universal:CreateToggle({
+	Name='AutoEZ',
+	CurrentValue=false,
+	Flag='universal_autoez',
+	Callback=function(state)
+		autoez=state
+		while autoez and wait(10) do
+			local num=math.random(1, 6)
+			if num==1 then
+				text='ez killed by lalol hub'
+			elseif num==2 then
+				text='ezzzzzz'
+			elseif num==3 then
+				text='ezzz lalol hub on top'
+			elseif num==4 then
+				text='ez noobs'
+			elseif num==5 then
+				text='ezzed by lаlol hubb'
+			elseif num==6 then
+				text='ezzzzz win by lalol hub'
+			end
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack({[1]=text, [2]='All'}))
+		end
+	end,
+})
+universal:CreateButton({
+	Name='Sit',
+	Callback=function()
+		game.Players.LocalPlayer.Character.Humanoid.Sit=true
 	end,
 })
