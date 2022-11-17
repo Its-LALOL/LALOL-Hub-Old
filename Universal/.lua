@@ -31,6 +31,8 @@ gravity_value=game.Workspace.Gravity
 infinite_jump=false
 esp=false
 autoez=false
+loop_teleport=false
+loop_teleport_player=''
 
 local ESP=Instance.new('Highlight')
 ESP.Name='LALOL Hub ESP'
@@ -99,15 +101,33 @@ universal:CreateToggle({
 		infinite_jump=state
 	end,
 })
+universal:CreateSection('Teleport')
+universal:CreateToggle({
+	Name='Loop Teleport',
+	CurrentValue=false,
+	Flag='universal_loop_teleport',
+	Callback=function(state)
+		loop_teleport=state
+	end,
+})
 universal:CreateInput({
-	Name='Teleport',
+	Name='Teleport to',
 	PlaceholderText='Player',
 	RemoveTextAfterFocusLost=false,
 	Callback=function(i)
 		for _,v in pairs(game.Players:GetPlayers()) do
 			if v.Name:lower():sub(1, #i)==i:lower() or v.DisplayName:lower():sub(1, #i)==i:lower() then
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=v.Character.HumanoidRootPart.CFrame
-				break
+				loop_teleport_player=v.Name
+				while true do
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=v.Character.HumanoidRootPart.CFrame
+					if not loop_teleport then
+						break
+					end
+					if not loop_teleport_player==v.Name then
+						break
+					end
+					wait(0.1)
+				end
 			end
 		end
 	end,
