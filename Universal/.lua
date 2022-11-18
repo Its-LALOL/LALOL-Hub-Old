@@ -75,8 +75,13 @@ end)
 local function getClosest()
 	local closestPlayer=nil
 	local closesDist=math.huge
+	if not player.Team then
+		team=1
+	else
+		team=player.Team
+	end
 	for i,v in pairs(game.Players:GetPlayers()) do
-		if v~=game.Players.LocalPlayer and v.Team~=game.Players.LocalPlayer.Team then
+		if v.team~=team and v~=player then
 			local Dist=(game.Players.LocalPlayer.Character.HumanoidRootPart.Position-v.Character.HumanoidRootPart.Position).magnitude
 			if Dist<closesDist then
 				closesDist=Dist
