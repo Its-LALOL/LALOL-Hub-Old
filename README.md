@@ -11,6 +11,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Infinite Jump
 - Loop Teleport
 - Teleport
+- Сtrl+Click Teleport
 - ESP
 - Rejoin
 - AutoEZ
