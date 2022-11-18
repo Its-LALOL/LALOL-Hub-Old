@@ -1,5 +1,5 @@
 # LALOL-Hub
-Script hub for Roblox
+*OPEN SOURCE* Script hub for Roblox
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/.lua'))()
 ```
