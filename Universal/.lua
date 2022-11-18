@@ -133,7 +133,7 @@ universal:CreateInput({
 					if not loop_teleport then
 						break
 					end
-					wait(0.1)
+					wait()
 				end
 			end
 		end
