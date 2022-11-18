@@ -3,7 +3,7 @@ Script hub for Roblox
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/.lua'))()
 ```
-[Get key](https://discord.gg/XXqzxT7E5z) | [Pastebin](https://pastebin.com/TKzGDUGL)
+[Get key](https://discord.gg/XXqzxT7E5z) | [Pastebin](https://pastebin.com/TKzGDUGL) | [Scriptblox](https://scriptblox.com/script/Universal-Script-LALOL-Hub-7112)
 ## Universal
 - Aimbot
 - Walk Speed
