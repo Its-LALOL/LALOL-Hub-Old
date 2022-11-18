@@ -265,6 +265,33 @@ universal:CreateToggle({
 		end
 	end,
 })
+universal:CreateInput({
+	Name='FPS',
+	PlaceholderText='60',
+	RemoveTextAfterFocusLost=false,
+	Callback=function(i)
+		setfpscap(i+0)
+	end,
+})
+universal:CreateToggle({
+	Name='Rendering',
+	CurrentValue=true,
+	Flag='universal_rendering',
+	Callback=function(state)
+		game:GetService('RunService'):Set3dRenderingEnabled(state)
+	end,
+})
+universal:CreateToggle({
+	Name='Anti-AFK Bypass',
+	CurrentValue=true,
+	Flag='universal_antiafk',
+	Callback=function(state)
+		for i,v in pairs(getconnections(player.Idled)) do
+			if state then v:Disable() end
+			if not state then v:Enable() end
+		end
+	end,
+})
 universal:CreateButton({
 	Name='Sit',
 	Callback=function()
