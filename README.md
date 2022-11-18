@@ -5,6 +5,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 ```
 [Get key](https://discord.gg/XXqzxT7E5z) | [Pastebin](https://pastebin.com/TKzGDUGL)
 ## Universal
+- Aimbot
 - Walk Speed
 - Jump Power
 - Gravity
