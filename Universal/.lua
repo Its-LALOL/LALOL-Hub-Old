@@ -26,6 +26,7 @@ local window=Rayfield:CreateWindow({
 })
 
 mouse=game.Players.LocalPlayer:GetMouse()
+camera=game.Workspace.CurrentCamera
 UserInputService=game:GetService('UserInputService')
 player=game.Players.LocalPlayer
 
@@ -37,6 +38,8 @@ esp=false
 autoez=false
 loop_teleport=false
 ctrl_tp=false
+aimbot=false
+aim=false
 
 local ESP=Instance.new('Highlight')
 ESP.Name='LALOL Hub ESP'
@@ -68,8 +71,44 @@ UserInputService.InputBegan:Connect(function(i, _)
 		end
 	end
 end)
+-- AIMBOT
+local function getClosest()
+	local closestPlayer=nil
+	local closesDist=math.huge
+	for i,v in pairs(game.Players:GetPlayers()) do
+		if v~=game.Players.LocalPlayer and v.Team~=game.Players.LocalPlayer.Team then
+			local Dist=(game.Players.LocalPlayer.Character.HumanoidRootPart.Position-v.Character.HumanoidRootPart.Position).magnitude
+			if Dist<closesDist then
+				closesDist=Dist
+				closestPlayer=v
+			end
+		end
+	end
+	return closestPlayer
+end
+UserInputService.InputBegan:Connect(function(inp)
+    if aimbot and inp.UserInputType==Enum.UserInputType.MouseButton2 then
+    	aim=true
+  	 	while aim and wait() do
+  			camera.CFrame=CFrame.new(camera.CFrame.Position, getClosest().Character.Head.Position)
+  	  	end
+	end
+end)
+UserInputService.InputEnded:Connect(function(inp)
+    if inp.UserInputType==Enum.UserInputType.MouseButton2 then
+	    aim=false
+    end
+end)
 
 local universal=window:CreateTab('Universal')
+universal:CreateToggle({
+	Name='Aimbot',
+	CurrentValue=false,
+	Flag='universal_aimbot',
+	Callback=function(state)
+		aimbot=state
+	end,
+})
 universal:CreateSection('Player')
 universal:CreateSlider({
 	Name='Walk Speed',
