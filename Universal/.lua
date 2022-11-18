@@ -25,6 +25,10 @@ local window=Rayfield:CreateWindow({
 	}
 })
 
+mouse=game.Players.LocalPlayer:GetMouse()
+UserInputService=game:GetService('UserInputService')
+player=game.Players.LocalPlayer
+
 walkspeed_value=game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
 jumppower_value=game.Players.LocalPlayer.Character.Humanoid.JumpPower
 gravity_value=game.Workspace.Gravity
@@ -32,27 +36,35 @@ infinite_jump=false
 esp=false
 autoez=false
 loop_teleport=false
+ctrl_tp=false
 
 local ESP=Instance.new('Highlight')
 ESP.Name='LALOL Hub ESP'
 ESP.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop
 ESP.FillTransparency=999
 
-game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(i)
+mouse.KeyDown:connect(function(i)
 	key=i:byte()
 	for i,v in {119, 97, 115, 100} do --WASD
 		if v==key then
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=walkspeed_value
+			player.Character.Humanoid.WalkSpeed=walkspeed_value
 			return
 		end
 	end
 	if key==32 then --Spacebar
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower=jumppower_value
+		player.Character.Humanoid.JumpPower=jumppower_value
 		game.Workspace.Gravity=gravity_value
 		if infinite_jump then
-			game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+			player.Character.Humanoid:ChangeState('Jumping')
 			wait(0.1)
-			game.Players.LocalPlayer.Character.Humanoid:ChangeState('Seated')
+			player.Character.Humanoid:ChangeState('Seated')
+		end
+	end
+end)
+UserInputService.InputBegan:Connect(function(i, _)
+	if i.UserInputType==Enum.UserInputType.MouseButton1 then
+		if ctrl_tp and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
+			player.Character:MoveTo(Vector3.new(mouse.Hit.x, mouse.Hit.y, mouse.Hit.z))
 		end
 	end
 end)
@@ -117,7 +129,7 @@ universal:CreateInput({
 		for _,v in pairs(game.Players:GetPlayers()) do
 			if v.Name:lower():sub(1, #i)==i:lower() or v.DisplayName:lower():sub(1, #i)==i:lower() then
 				while true do
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=v.Character.HumanoidRootPart.CFrame
+					player.Character.HumanoidRootPart.CFrame=v.Character.HumanoidRootPart.CFrame
 					if not loop_teleport then
 						break
 					end
@@ -125,6 +137,14 @@ universal:CreateInput({
 				end
 			end
 		end
+	end,
+})
+universal:CreateToggle({
+	Name='Сtrl+Click Teleport',
+	CurrentValue=false,
+	Flag='universal_ctrl_tp',
+	Callback=function(state)
+		ctrl_tp=state
 	end,
 })
 universal:CreateSection('Visual')
@@ -204,6 +224,6 @@ universal:CreateToggle({
 universal:CreateButton({
 	Name='Sit',
 	Callback=function()
-		game.Players.LocalPlayer.Character.Humanoid.Sit=true
+		player.Character.Humanoid.Sit=true
 	end,
 })
