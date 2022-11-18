@@ -15,6 +15,8 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Сtrl+Click Teleport
 - ESP
 - Rejoin
+- FPS
+- Rendering
 - AutoEZ
 - Sit
 ## [Free ADMIN](https://www.roblox.com/games/4522347649/FREE-ADMIN)
