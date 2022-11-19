@@ -24,7 +24,10 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Spam
 - Spam 2.0
 - Jail all
+- Crash all
 - Scary sounds
+- Phonk
+- Scream
 ## [SPTS: Origin](https://www.roblox.com/games/10710676163/SPTS-Origin)
 - Level (BETA)
 - Fist Strength
