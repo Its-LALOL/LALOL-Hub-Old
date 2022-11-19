@@ -261,6 +261,19 @@ universal:CreateToggle({
 			elseif num==6 then
 				text='ezzzzz win by lalol hub'
 			end
+			if game.PlaceId==286090429 then -- If arsenal
+				local args = {
+				    [1] = "Hah!",
+				    [2] = text,
+				    [3] = false,
+				    [5] = false,
+				    [6] = true
+				}
+
+				game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(unpack(args))
+				continue
+			end
+
 			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack({[1]=text, [2]='All'}))
 		end
 	end,
