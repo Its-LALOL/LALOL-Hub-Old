@@ -23,7 +23,7 @@ fa:CreateButton({
 			elseif num==3 then
 				emoji='🤡'
 			end
-			command(':talk '..v.name..' '..emoji..' LALOL Hub '..emoji)
+			command(':talk '..v.name..' '..emoji..' type "LALOL Hub on top" to get free rubax! '..emoji)
 		end
 	end,
 })
@@ -39,7 +39,7 @@ fa:CreateButton({
 			elseif num==3 then
 				emoji='🤡'
 			end
-			command(':sm '..emoji..' LALOL Hub '..emoji)
+			command(':sm '..emoji..' type "LALOL Hub on top" to get free rubax! '..emoji)
 			wait(3)
 		end
 	end,
