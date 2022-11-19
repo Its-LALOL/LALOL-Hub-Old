@@ -25,8 +25,6 @@ local window=Rayfield:CreateWindow({
 	}
 })
 
-tab_image=6924122138
-
 mouse=game.Players.LocalPlayer:GetMouse()
 camera=game.Workspace.CurrentCamera
 UserInputService=game:GetService('UserInputService')
@@ -107,7 +105,7 @@ UserInputService.InputEnded:Connect(function(inp)
     end
 end)
 
-local universal=window:CreateTab('Universal', 6755657145)
+local universal=window:CreateTab('Universal')
 universal:CreateToggle({
 	Name='Aimbot',
 	CurrentValue=false,
