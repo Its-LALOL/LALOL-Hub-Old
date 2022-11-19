@@ -12,6 +12,18 @@ fa:CreateButton({
 	end,
 })
 fa:CreateButton({
+	Name='Crash all',
+	Callback=function()
+		old=player.Character.HumanoidRootPart.CFrame
+		player.Character.HumanoidRootPart.CFrame=CFrame.new(-3949.56323, 99999999999999999, -3439.6062, -0.98901552, 0.00691204006, -0.147650108, 9.99347094e-09, 0.998906016, 0.0467623696, 0.1478118, 0.0462487079, -0.987933576)
+		for i,v in pairs(game.Players:GetPlayers()) do
+			command(':bring '..v.name)
+		end
+		wait(3)
+		player.Character.HumanoidRootPart.CFrame=old
+	end,
+})
+fa:CreateButton({
 	Name='Spam',
 	Callback=function()
 		for i,v in pairs(game.Players:GetPlayers()) do
@@ -50,18 +62,6 @@ fa:CreateButton({
 		for i,v in pairs(game.Players:GetPlayers()) do
 			command(':jail '..v.name)
 		end
-	end,
-})
-fa:CreateButton({
-	Name='Crash all',
-	Callback=function()
-		old=player.Character.HumanoidRootPart.CFrame
-		player.Character.HumanoidRootPart.CFrame=CFrame.new(-3949.56323, 99999999999999999, -3439.6062, -0.98901552, 0.00691204006, -0.147650108, 9.99347094e-09, 0.998906016, 0.0467623696, 0.1478118, 0.0462487079, -0.987933576)
-		for i,v in pairs(game.Players:GetPlayers()) do
-			command(':bring '..v.name)
-		end
-		wait(3)
-		player.Character.HumanoidRootPart.CFrame=old
 	end,
 })
 fa:CreateButton({
