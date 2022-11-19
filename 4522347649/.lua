@@ -53,6 +53,14 @@ fa:CreateButton({
 	end,
 })
 fa:CreateButton({
+	Name='Crash all',
+	Callback=function()
+		for i,v in pairs(game.Players:GetPlayers()) do
+			command(':control '..v.name)
+		end
+	end,
+})
+fa:CreateButton({
 	Name='Scary Sounds',
 	Callback=function()
 		command(':music 4737106301')
