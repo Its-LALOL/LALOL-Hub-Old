@@ -72,7 +72,7 @@ fa:CreateButton({
 fa:CreateButton({
 	Name='Phonk',
 	Callback=function()
-		command(':music 4737106301')
+		command(':music 6911766512')
 		command(':volume 9999999')
 	end,
 })
