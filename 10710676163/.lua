@@ -18,7 +18,7 @@ local function remote(what)
 	}
 	game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 end
-local spts=window:CreateTab('SPTS', tab_image)
+local spts=window:CreateTab('SPTS')
 spts:CreateSection('AutoFarm')
 spts:CreateSlider({
 	Name='Level (BETA)',
