@@ -19,7 +19,7 @@ local function upgrade()
 	end
 end
 
-local skala=window:CreateTab('Skala Simulator', tab_image)
+local skala=window:CreateTab('Skala Simulator')
 skala:CreateSection('AutoFarm')
 skala:CreateToggle({
 	Name='AutoClicker',
