@@ -25,6 +25,8 @@ local window=Rayfield:CreateWindow({
 	}
 })
 
+tab_image=10643414864
+
 mouse=game.Players.LocalPlayer:GetMouse()
 camera=game.Workspace.CurrentCamera
 UserInputService=game:GetService('UserInputService')
