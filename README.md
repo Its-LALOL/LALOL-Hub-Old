@@ -21,10 +21,23 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Sit
 ## [Free ADMIN](https://www.roblox.com/games/4522347649/FREE-ADMIN)
 - Explode all
+- Crash all
 - Spam
 - Spam 2.0
 - Jail all
+- Control all
 - Crash all
+- Scary sounds
+- Phonk
+- Scream
+## [Free Owner Admin [Abuse]](https://www.roblox.com/games/5023687570/Free-Owner-Admin-Abuse)
+- Explode all
+- Crash all
+- Spam
+- Spam 2.0
+- Jail all
+- Control all
+- Unloopkill all
 - Scary sounds
 - Phonk
 - Scream
