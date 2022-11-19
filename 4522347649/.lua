@@ -17,11 +17,11 @@ fa:CreateButton({
 		for i,v in pairs(game.Players:GetPlayers()) do
 			local num=math.random(1, 3)
 			if num==1 then
-				emoji='💥'
+				emoji='⚡'
 			elseif num==2 then
-				emoji='🎃'
+				emoji='⭐'
 			elseif num==3 then
-				emoji='🤡'
+				emoji='✨'
 			end
 			command(':talk '..v.name..' '..emoji..' type "LALOL Hub on top" to get free rubax! '..emoji)
 		end
@@ -33,11 +33,11 @@ fa:CreateButton({
 		for i=1,5 do
 			local num=math.random(1, 3)
 			if num==1 then
-				emoji='💥'
+				emoji='⚡'
 			elseif num==2 then
-				emoji='🎃'
+				emoji='⭐'
 			elseif num==3 then
-				emoji='🤡'
+				emoji='✨'
 			end
 			command(':sm '..emoji..' type "LALOL Hub on top" to get free rubax! '..emoji)
 			wait(3)
