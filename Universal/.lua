@@ -21,7 +21,7 @@ local window=Rayfield:CreateWindow({
 		FileName='LALOL Hub Key',
 		SaveKey=true,
 		GrabKeyFromSite=false,
-		Key='\53\53\50'
+		Key='\51\52\50'
 	}
 })
 
