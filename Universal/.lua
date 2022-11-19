@@ -105,7 +105,7 @@ UserInputService.InputEnded:Connect(function(inp)
     end
 end)
 
-local universal=window:CreateTab('Universal')
+local universal=window:CreateTab('Universal', 5639840621)
 universal:CreateToggle({
 	Name='Aimbot',
 	CurrentValue=false,
