@@ -99,8 +99,8 @@ fa:CreateButton({
 fa:CreateButton({
 	Name='Scream',
 	Callback=function()
-		command(':music 8819324666')
-		command(':volume 9999999')
-		command(':pitch 2')
+		command(';music 8819324666')
+		command(';volume 9999999')
+		command(';pitch 2')
 	end,
 })
