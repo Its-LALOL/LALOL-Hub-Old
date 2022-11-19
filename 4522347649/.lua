@@ -53,7 +53,7 @@ fa:CreateButton({
 	end,
 })
 fa:CreateButton({
-	Name='Crash all',
+	Name='Control all',
 	Callback=function()
 		for i,v in pairs(game.Players:GetPlayers()) do
 			command(':control '..v.name)
