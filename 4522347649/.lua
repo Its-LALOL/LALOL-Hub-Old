@@ -60,11 +60,19 @@ fa:CreateButton({
 		end
 	end,
 })
+fa:CreateSection('Music')
 fa:CreateButton({
 	Name='Scary Sounds',
 	Callback=function()
 		command(':music 4737106301')
 		command(':volume 9999999')
 		command(':pitch 0.3')
+	end,
+})
+fa:CreateButton({
+	Name='Phonk',
+	Callback=function()
+		command(':music 4737106301')
+		command(':volume 9999999')
 	end,
 })
