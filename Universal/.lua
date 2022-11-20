@@ -42,6 +42,7 @@ aimbot=false
 aim=false
 ambient=game.Lighting.Ambient
 outdoor_ambient=game.Lighting.OutdoorAmbient
+fogstart=game.Lighting.FogStart
 
 local ESP=Instance.new('Highlight')
 ESP.Name='LALOL Hub ESP'
@@ -245,6 +246,18 @@ universal:CreateToggle({
 		else
 			game.Lighting.Ambient=ambient
 			game.Lighting.OutdoorAmbient=outdoor_ambient
+		end
+	end,
+})
+universal:CreateToggle({
+	Name='Remove Fog',
+	CurrentValue=false,
+	Flag='universal_remove_fog',
+	Callback=function(state)
+		if state then
+			game.Lighting.FogStart=9999999
+		else
+			game.Lighting.FogStart=fogstart
 		end
 	end,
 })
