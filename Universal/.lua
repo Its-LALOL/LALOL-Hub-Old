@@ -40,6 +40,8 @@ loop_teleport=false
 ctrl_tp=false
 aimbot=false
 aim=false
+ambient=game.Lighting.Ambient
+outdoor_ambient=game.Lighting.OutdoorAmbient
 
 local ESP=Instance.new('Highlight')
 ESP.Name='LALOL Hub ESP'
@@ -232,6 +234,20 @@ universal:CreateToggle({
 		end
 	end,
 })
+universal:CreateToggle({
+	Name='Pink Glasses',
+	CurrentValue=false,
+	Flag='universal_pink_glasses',
+	Callback=function(state)
+		if state then
+			game.Lighting.Ambient=Color3.fromRGB(225, 20, 147)
+			game.Lighting.OutdoorAmbient=Color3.fromRGB(225, 20, 147)
+		else
+			game.Lighting.Ambient=ambient
+			game.Lighting.OutdoorAmbient=outdoor_ambient
+		end
+	end,
+})
 universal:CreateSection('Server')
 universal:CreateButton({
 	Name='Rejoin',
@@ -269,11 +285,9 @@ universal:CreateToggle({
 				    [5] = false,
 				    [6] = true
 				}
-
 				game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(unpack(args))
 				continue
 			end
-
 			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack({[1]=text, [2]='All'}))
 		end
 	end,
