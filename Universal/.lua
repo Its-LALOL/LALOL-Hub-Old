@@ -4,7 +4,7 @@ local window=Rayfield:CreateWindow({
 	LoadingTitle='LALOL Hub',
 	LoadingSubtitle='Thanks for using!',
 	ConfigurationSaving={
-		Enabled=true,
+		Enabled=false,
 		FolderName='LALOL Hub',
 		FileName='cfg'
 	},
@@ -21,7 +21,7 @@ local window=Rayfield:CreateWindow({
 		FileName='LALOL Hub Key',
 		SaveKey=true,
 		GrabKeyFromSite=false,
-		Key='\51\52\50'
+		Key='\51\52\50' -- dont change or ur computer will explode
 	}
 })
 
