@@ -14,6 +14,9 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Teleport
 - Сtrl+Click Teleport
 - ESP
+- Pink Glasses
+- Remove Fog
+- Full Brightness
 - Rejoin
 - FPS
 - Rendering
