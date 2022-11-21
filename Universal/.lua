@@ -21,7 +21,7 @@ local window=Rayfield:CreateWindow({
 		FileName='LALOL Hub Key',
 		SaveKey=true,
 		GrabKeyFromSite=false,
-		Key='\51\52\50' -- dont change or ur computer will explode
+		Key='\51\52\50' -- dont change or ur pc will explode
 	}
 })
 
@@ -83,7 +83,7 @@ local function getClosest()
 	else
 		team=player.Team
 	end
-	for i,v in pairs(game.Players:GetPlayers()) do
+	for i,v in pairs(game.Players:GetChildren()) do
 		if v.team~=team and v~=player then
 			local Dist=(game.Players.LocalPlayer.Character.HumanoidRootPart.Position-v.Character.HumanoidRootPart.Position).magnitude
 			if Dist<closesDist then
@@ -202,7 +202,7 @@ universal:CreateToggle({
 	Callback=function(state)
 		esp=state
 		while esp and wait(1) do
-			for i,v in pairs(game.Players:GetPlayers()) do
+			for i,v in pairs(game.Players:GetChildren()) do
 				if not v.Character then
 					continue
 				end
