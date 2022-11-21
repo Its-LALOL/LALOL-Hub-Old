@@ -1,4 +1,5 @@
 silent_aim=false
+autocollect=false
 
 local arsenal=window:CreateTab('Arsenal')
 toggle=arsenal:CreateToggle({
@@ -22,3 +23,18 @@ toggle=arsenal:CreateToggle({
 		toggle:Set(true)
 	end,
 })
+arsenal:CreateToggle({
+	Name='AutoCollect',
+	CurrentValue=false,
+	Flag='arsenal_autocollect',
+	Callback=function(state)
+		autocollect=state
+		while autocollect and wait(0.5) do
+			object=game.Workspace.Debris:FindFirstChildOfClass('MeshPart')
+			if object then
+				object.CFrame=player.Character.HumanoidRootPart.CFrame
+			end
+		end
+	end,
+})
+
