@@ -19,6 +19,8 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Rendering
 - AutoEZ
 - Sit
+## [Arsenal](https://www.roblox.com/games/286090429/Arsenal)
+- Silent aim
 ## [Free ADMIN](https://www.roblox.com/games/4522347649/FREE-ADMIN)
 - Explode all
 - Crash all
