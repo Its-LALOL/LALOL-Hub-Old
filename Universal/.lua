@@ -43,6 +43,9 @@ aim=false
 ambient=game.Lighting.Ambient
 outdoor_ambient=game.Lighting.OutdoorAmbient
 fogstart=game.Lighting.FogStart
+brightness=game.Lighting.Brightness
+clocktime=game.Lighting.ClockTime
+shadows=game.Lighting.GlobalShadows
 
 local ESP=Instance.new('Highlight')
 ESP.Name='LALOL Hub ESP'
@@ -258,6 +261,24 @@ universal:CreateToggle({
 			game.Lighting.FogStart=9999999
 		else
 			game.Lighting.FogStart=fogstart
+		end
+	end,
+})
+universal:CreateToggle({
+	Name='Full Brightness',
+	CurrentValue=false,
+	Flag='universal_full_brightness',
+	Callback=function(state)
+		if state then
+			game.Lighting.Brightness=2
+			game.Lighting.ClockTime=14
+			game.Lighting.GlobalShadows=false
+			game.Lighting.OutdoorAmbient=Color3.fromRGB(128, 128, 128)
+		else
+			game.Lighting.Brightness=brightness
+			game.Lighting.ClockTime=clocktime
+			game.Lighting.GlobalShadows=shadows
+			game.Lighting.OutdoorAmbient=outdoor_ambient
 		end
 	end,
 })
