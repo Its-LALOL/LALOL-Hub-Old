@@ -13,7 +13,7 @@ local window=Rayfield:CreateWindow({
         	Invite='XXqzxT7E5z',
         	RememberJoins=true
         },
-	KeySystem=true,
+	KeySystem=true, -- dont change or ur pc will explode
 	KeySettings={
 		Title='LALOL Hub',
 		Subtitle='Key System',
@@ -21,7 +21,7 @@ local window=Rayfield:CreateWindow({
 		FileName='LALOL Hub Key',
 		SaveKey=true,
 		GrabKeyFromSite=false,
-		Key='\51\52\50' -- dont change or ur pc will explode
+		Key='\55\50\56' -- dont change or ur pc will explode
 	}
 })
 
