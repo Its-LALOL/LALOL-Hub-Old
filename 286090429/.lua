@@ -30,7 +30,7 @@ arsenal:CreateToggle({
 	Callback=function(state)
 		autocollect=state
 		while autocollect and wait(0.1) do
-			object=game.Workspace.Debris:FindFirstChildOfClass('MeshPart')
+			object=game.Workspace.Debris:FindFirstChildOfClass('Part') or game.Workspace.Debris:FindFirstChildOfClass('MeshPart')
 			if object then
 				object.CFrame=player.Character.HumanoidRootPart.CFrame
 			end
