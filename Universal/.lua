@@ -28,6 +28,7 @@ local window=Rayfield:CreateWindow({
 mouse=game.Players.LocalPlayer:GetMouse()
 camera=game.Workspace.CurrentCamera
 UserInputService=game:GetService('UserInputService')
+VirtualInputManager=game:GetService('VirtualInputManager')
 player=game.Players.LocalPlayer
 
 walkspeed_value=game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
