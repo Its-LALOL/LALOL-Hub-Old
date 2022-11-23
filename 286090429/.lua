@@ -46,6 +46,7 @@ toggle=arsenal:CreateToggle({
 		while silent_aim and wait(1) do
 			for i,v in pairs(game.Players:GetPlayers()) do
 				if v~=player then
+					if not v.Character:FindFirstChild('LowerTorso') then break end
 					v.Character.LowerTorso.Transparency=1
 					v.Character.LowerTorso.CanCollide=false
 					v.Character.LowerTorso.Size=size
