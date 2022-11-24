@@ -16,6 +16,7 @@ fa:CreateButton({
 		player.Character.HumanoidRootPart.Position=Vector3.new(0,9e9,0)
 		command(';bring all')
 		wait(0.5)
+		command(':re')
 		player.Character.HumanoidRootPart.CFrame=old
 	end,
 })
