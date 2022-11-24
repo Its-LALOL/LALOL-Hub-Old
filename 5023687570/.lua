@@ -13,7 +13,7 @@ fa:CreateButton({
 	Name='Crash all',
 	Callback=function()
 		old=player.Character.HumanoidRootPart.CFrame
-		player.Character.HumanoidRootPart.CFrame=CFrame.new(-3949.56323, 99999999999999999, -3439.6062, -0.98901552, 0.00691204006, -0.147650108, 9.99347094e-09, 0.998906016, 0.0467623696, 0.1478118, 0.0462487079, -0.987933576)
+		player.Character.HumanoidRootPart.Position=Vector3.new(0,9e9,0)
 		command(';bring all')
 		wait(0.5)
 		player.Character.HumanoidRootPart.CFrame=old
