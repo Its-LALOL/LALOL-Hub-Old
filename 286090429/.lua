@@ -20,7 +20,7 @@ arsenal:CreateToggle({
 				if v.team~=team and v~=player then
 					number=0
 					while genocide and wait() do
-						if not v.Character:FindFirstChild('LowerTorso') then break end
+						if not v.Character or not v.Character:FindFirstChild('LowerTorso') then break end
 						player.Character.HumanoidRootPart.CFrame=v.Character.LowerTorso.CFrame*CFrame.new(0,0,1.2)
 						camera.CFrame=CFrame.new(camera.CFrame.Position, v.Character.Head.Position)
 						number+=1
