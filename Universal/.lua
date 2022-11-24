@@ -29,6 +29,7 @@ mouse=game.Players.LocalPlayer:GetMouse()
 camera=game.Workspace.CurrentCamera
 UserInputService=game:GetService('UserInputService')
 VirtualInputManager=game:GetService('VirtualInputManager')
+RunService=game:GetService('RunService')
 player=game.Players.LocalPlayer
 
 walkspeed_value=game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
@@ -53,6 +54,7 @@ ESP.Name='LALOL Hub ESP'
 ESP.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop
 ESP.FillTransparency=999
 
+-- SPEED WALK, JUMP POWER, INFINITE JUMP
 mouse.KeyDown:connect(function(i)
 	key=i:byte()
 	for i,v in {119, 97, 115, 100} do --WASD
@@ -71,6 +73,7 @@ mouse.KeyDown:connect(function(i)
 		end
 	end
 end)
+-- CTRL TP
 UserInputService.InputBegan:Connect(function(i, _)
 	if i.UserInputType==Enum.UserInputType.MouseButton1 then
 		if ctrl_tp and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
@@ -111,7 +114,7 @@ UserInputService.InputEnded:Connect(function(inp)
 	    aim=false
     end
 end)
-
+---------------------------------------------
 local universal=window:CreateTab('Universal')
 universal:CreateToggle({
 	Name='Aimbot',
@@ -153,6 +156,25 @@ universal:CreateSlider({
 	Flag='universal_gravity',
 	Callback=function(i)
 		gravity_value=i
+	end,
+})
+universal:CreateToggle({
+	Name='Noclip',
+	CurrentValue=false,
+	Flag='universal_noclip',
+	Callback=function(state)
+		if state then
+			noclip=RunService.Stepped:Connect(function()
+				for i,v in pairs(player.Character:GetDescendants()) do
+					if v:IsA('BasePart') and v.CanCollide then
+						v.CanCollide=false
+					end
+				end
+				wait()
+			end)
+		else
+			noclip:Disconnect()
+		end
 	end,
 })
 universal:CreateToggle({
