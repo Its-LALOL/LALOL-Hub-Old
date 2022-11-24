@@ -20,6 +20,7 @@ fa:CreateButton({
 			command(':bring '..v.name)
 		end
 		wait(3)
+		command(':re')
 		player.Character.HumanoidRootPart.CFrame=old
 	end,
 })
