@@ -2,7 +2,7 @@ genocide=false
 silent_aim=false
 autocollect=false
 
-local arsenal=window:CreateTab('Arsenal')
+local arsenal=window:CreateTab('Arsenal', tab_image)
 arsenal:CreateToggle({
 	Name='Genocide 😈',
 	CurrentValue=false,
