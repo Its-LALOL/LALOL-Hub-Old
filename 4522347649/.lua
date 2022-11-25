@@ -9,6 +9,7 @@ fa:CreateButton({
 		for i,v in pairs(game.Players:GetPlayers()) do
 			command(':explode '..v.name)
 		end
+		checkmark('Successfully exploded all!')
 	end,
 })
 fa:CreateButton({
@@ -22,6 +23,7 @@ fa:CreateButton({
 		wait(3)
 		command(':re')
 		player.Character.HumanoidRootPart.CFrame=old
+		checkmark('Successfully crashed all!')
 	end,
 })
 fa:CreateButton({
@@ -63,6 +65,7 @@ fa:CreateButton({
 		for i,v in pairs(game.Players:GetPlayers()) do
 			command(':jail '..v.name)
 		end
+		checkmark('Successfully jailed all!')
 	end,
 })
 fa:CreateButton({
@@ -71,6 +74,7 @@ fa:CreateButton({
 		for i,v in pairs(game.Players:GetPlayers()) do
 			command(':control '..v.name)
 		end
+		checkmark('Successfully controled all!')
 	end,
 })
 fa:CreateSection('Music')
