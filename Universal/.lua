@@ -281,7 +281,7 @@ universal:CreateToggle({
 	Flag='universal_remove_fog',
 	Callback=function(state)
 		if state then
-			game.Lighting.FogStart=9999999
+			game.Lighting.FogStart=9e9
 		else
 			game.Lighting.FogStart=fogstart
 		end
