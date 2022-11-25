@@ -48,6 +48,10 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Scary sounds
 - Phonk
 - Scream
+## [Rate My Avatar](https://www.roblox.com/games/6708206173/Rate-My-Avatar)
+- Snipe booth
+- Blacklist all
+- Unblacklist all
 ## [SPTS: Origin](https://www.roblox.com/games/10710676163/SPTS-Origin)
 - Level (BETA)
 - Fist Strength
