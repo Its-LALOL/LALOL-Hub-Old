@@ -54,6 +54,17 @@ ESP.Name='LALOL Hub ESP'
 ESP.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop
 ESP.FillTransparency=999
 
+tab_image=590553552
+
+function checkmark(text, duration)
+	Rayfield:Notify({
+		Title='LALOL Hub',
+		Content=text,
+		Duration=duration,
+		Image=4914902889
+	})
+end
+
 -- SPEED WALK, JUMP POWER, INFINITE JUMP
 mouse.KeyDown:connect(function(i)
 	key=i:byte()
@@ -115,7 +126,7 @@ UserInputService.InputEnded:Connect(function(inp)
     end
 end)
 ---------------------------------------------
-local universal=window:CreateTab('Universal')
+local universal=window:CreateTab('Universal', 3075924681)
 universal:CreateToggle({
 	Name='Aimbot',
 	CurrentValue=false,
