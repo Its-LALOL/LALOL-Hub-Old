@@ -2,7 +2,7 @@ local function command(text)
 	game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack({[1]=text}))
 end
 
-fa=window:CreateTab('Free Admin')
+fa=window:CreateTab('Free Admin', tab_image)
 fa:CreateButton({
 	Name='Explode all',
 	Callback=function()
