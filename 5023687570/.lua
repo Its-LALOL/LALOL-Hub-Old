@@ -7,6 +7,7 @@ fa:CreateButton({
 	Name='Explode all',
 	Callback=function()
 		command(';explode all')
+		checkmark('Successfully exploded all!')
 	end,
 })
 fa:CreateButton({
@@ -16,8 +17,9 @@ fa:CreateButton({
 		player.Character.HumanoidRootPart.Position=Vector3.new(0,9e9,0)
 		command(';bring all')
 		wait(0.5)
-		command(':re')
+		command(';re')
 		player.Character.HumanoidRootPart.CFrame=old
+		checkmark('Successfully crashed all!')
 	end,
 })
 fa:CreateButton({
@@ -57,12 +59,14 @@ fa:CreateButton({
 	Name='Jail all',
 	Callback=function()
 		command(';jail all')
+		checkmark('Successfully jailed all!')
 	end,
 })
 fa:CreateButton({
 	Name='Control all',
 	Callback=function()
 		command(';control all')
+		checkmark('Successfully controled all!')
 	end,
 })
 fa:CreateButton({
