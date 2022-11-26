@@ -26,21 +26,12 @@ rma:CreateInput({
 	end,
 })
 rma:CreateButton({
-	Name='Unblacklist all',
+	Name='Blacklist all',
 	Callback=function()
 		for _,v in pairs(game.Players:GetPlayers()) do
 			if not v.Name==player.name then game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack({[1]='AddBlacklist', [2]=v.Name})) end
 		end
 		checkmark('Successfully blacklisted all!')
-	end,
-})
-rma:CreateButton({
-	Name='Blacklist all',
-	Callback=function()
-		for _,v in pairs(game.Players:GetPlayers()) do
-			if not v.Name==player.name then game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack({[1]='RemoveBlacklist', [2]=v.Name})) end
-		end
-		checkmark('Successfully unblacklisted all!')
 	end,
 })
 rma:CreateButton({
@@ -59,5 +50,13 @@ rma:CreateButton({
 	Name='Get sword',
 	Callback=function()
 		game:GetService("ReplicatedStorage").RequestTool:FireServer(unpack({[1]='ClassicSword'}))
+	end,
+})
+rma:CreateToggle({
+	Name='Chat',
+	CurrentValue=false,
+	Flag='rma_chat',
+	Callback=function(state)
+		player.PlayerGui.Chat.Frame.ChatChannelParentFrame.Visible=state --dont skid this
 	end,
 })
