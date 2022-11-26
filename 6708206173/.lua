@@ -26,7 +26,7 @@ rma:CreateInput({
 	end,
 })
 rma:CreateButton({
-	Name='Blacklist all',
+	Name='Unblacklist all',
 	Callback=function()
 		for _,v in pairs(game.Players:GetPlayers()) do
 			if not v.Name==player.name then game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack({[1]='AddBlacklist', [2]=v.Name})) end
