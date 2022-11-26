@@ -35,11 +35,20 @@ rma:CreateButton({
 	end,
 })
 rma:CreateButton({
-	Name='Unblacklist all',
+	Name='Get Knight',
 	Callback=function()
-		for _,v in pairs(game.Players:GetPlayers()) do
-			if not v.Name==player.name then game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack({[1]='RemoveBlacklist', [2]=v.Name})) end
+		old=player.Character.HumanoidRootPart.CFrame
+		player.Character.HumanoidRootPart.CFrame=game.Workspace.JewelleryStand.CFrame
+		for i=1,10 do
+			fireproximityprompt(game.Workspace.JewelleryStand.ProximityPrompt)
+			wait(0.1)
 		end
-		checkmark('Successfully unblacklisted all!')
+		player.Character.HumanoidRootPart.CFrame=old
+	end,
+})
+rma:CreateButton({
+	Name='Get sword',
+	Callback=function()
+		game:GetService("ReplicatedStorage").RequestTool:FireServer(unpack({[1]='ClassicSword'}))
 	end,
 })
