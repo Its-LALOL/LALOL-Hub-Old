@@ -35,6 +35,15 @@ rma:CreateButton({
 	end,
 })
 rma:CreateButton({
+	Name='Blacklist all',
+	Callback=function()
+		for _,v in pairs(game.Players:GetPlayers()) do
+			if not v.Name==player.name then game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack({[1]='RemoveBlacklist', [2]=v.Name})) end
+		end
+		checkmark('Successfully unblacklisted all!')
+	end,
+})
+rma:CreateButton({
 	Name='Get Knight',
 	Callback=function()
 		old=player.Character.HumanoidRootPart.CFrame
