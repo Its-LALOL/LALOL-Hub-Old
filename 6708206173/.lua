@@ -56,7 +56,7 @@ rma:CreateButton({
 	end,
 })
 rma:CreateButton({
-	Name='Get sword',
+	Name='Get Sword',
 	Callback=function()
 		game:GetService("ReplicatedStorage").RequestTool:FireServer(unpack({[1]='ClassicSword'}))
 	end,
