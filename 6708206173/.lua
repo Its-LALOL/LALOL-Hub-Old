@@ -1,3 +1,5 @@
+fake_afk=false
+
 local rma=window:CreateTab('Rate My Avatar', tab_image)
 rma:CreateButton({
 	Name='Snipe booth',
@@ -67,5 +69,27 @@ rma:CreateToggle({
 	Flag='rma_chat',
 	Callback=function(state)
 		player.PlayerGui.Chat.Frame.ChatChannelParentFrame.Visible=state --dont skid this
+	end,
+})
+rma:CreateToggle({
+	Name='Fake AFK',
+	CurrentValue=false,
+	Flag='rma_fake_afk',
+	Callback=function(state)
+		fake_afk=state
+		while fake_afk and wait(0.5) do
+			game:GetService("ReplicatedStorage").AFK:FireServer(unpack({[1]=false}))
+		end
+	end,
+})
+rma:CreateButton({
+	Name='Blacklist Bypass',
+	Callback=function()
+		for i=1,30 do
+			v=game.Workspace:FindFirstChild('BarrierFor'..player.Name)
+			if v and v:FindFirstChild('TouchInterest') then
+				v.TouchInterest:remove()
+			end
+		end
 	end,
 })
