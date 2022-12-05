@@ -54,6 +54,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Unblacklist all
 - Get Knight
 - Get Sword
+- Blacklist Bypass
 ## [SPTS: Origin](https://www.roblox.com/games/10710676163/SPTS-Origin)
 - Level (BETA)
 - Fist Strength
