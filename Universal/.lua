@@ -21,7 +21,7 @@ local window=Rayfield:CreateWindow({
 		FileName='LALOL Hub Key',
 		SaveKey=true,
 		GrabKeyFromSite=false,
-		Key='\55\49\55' -- dont change or ur pc will explode
+		Key='\57\48\50' -- dont change or ur pc will explode
 	}
 })
 
