@@ -378,7 +378,7 @@ universal:CreateToggle({
 })
 universal:CreateToggle({
 	Name='Anti-AFK Bypass',
-	CurrentValue=true,
+	CurrentValue=false,
 	Flag='universal_antiafk',
 	Callback=function(state)
 		for i,v in pairs(getconnections(player.Idled)) do
