@@ -48,6 +48,10 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/m
 - Scary sounds
 - Phonk
 - Scream
+## [Legends Of Speed](https://www.roblox.com/games/3101667897/Legends-Of-Speed)
+- AutoHoop
+- AutoOrb
+- AutoRebith
 ## [Rate My Avatar](https://www.roblox.com/games/6708206173/Rate-My-Avatar)
 - Snipe booth
 - Blacklist all
